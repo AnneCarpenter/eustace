@@ -1,7 +1,7 @@
 {
   "name": "eustace",
-  "version": "0.0.0",
-  "description": "Small description for eustace goes here",
+  "version": "0.0.1",
+  "description": "…",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -16,10 +16,13 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "main": "main.js",
+  "author": "Imaging Platform, Broad Institute of MIT and Harvard",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
+    "electron-packager": "^5.0.2",
+    "electron-prebuilt": "^0.30.4",
     "ember-bootstrap": "0.2.0",
     "ember-cli": "1.13.8",
     "ember-cli-app-version": "0.5.0",
