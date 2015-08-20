@@ -26,11 +26,14 @@ app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600});
 
-  // and load the index.html of the app.
-  mainWindow.loadUrl('file://' + __dirname + '/app/index.html');
-
-  // Open the devtools.
-  mainWindow.openDevTools();
+  if (process.env.ELECTRON_ENV === 'development') {
+    mainWindow.openDevTools();
+    
+    mainWindow.loadUrl('http://localhost:5000');
+  } else {
+    // and load the index.html of the app.
+    mainWindow.loadUrl('file://' + __dirname + '/dist/index.html');
+  }
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
